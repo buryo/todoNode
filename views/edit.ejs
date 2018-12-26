@@ -1,0 +1,13 @@
+<%- include header.ejs %>
+
+<% data.forEach((data) => { %>
+    <form action="/edit/<%= data.id %>" method="POST">
+        <div class="form-group">
+            <label for="taskTitle">Task title</label>
+            <input type="text" name="title" class="form-control" id="taskTitle" placeholder="Enter a task title" value="<%= data.title %>">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+<% }); %>
+
+<%- include footer.ejs %>
